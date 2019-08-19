@@ -34,8 +34,8 @@ module.exports = {
 
     let searchOptions = {
       searchTerm: req.param('term'),
-      limit: req.param('limit') || 10,
-      offset: req.param('offset') || 10
+      limit: req.param('limit') || process.env.LIMIT || 10,
+      offset: req.param('offset') || process.env.OFFSET || 10
     };
 
     /**
